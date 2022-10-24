@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:contentDescription="@string/logo_description"
+            app:srcCompat="@drawable/fuelapplogo" />
+
+        <TextView
+            android:id="@+id/FuelLoactorRegisterTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FUEL STATION REGISTER"
+            android:textAlignment="center"
+            android:textColor="#009688"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:text="    Fuel Station Name"
+            android:textColor="#0E0E0E"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etFuelStationName"
+                    android:layout_width="388dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:hint="Fuel Station Name"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#A1887F"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:text="    Fuel Station Number"
+                    android:textColor="#0E0E0E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etFuelStationLocation"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:ems="10"
+                    android:hint="Fuel Station Number"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#A1887F"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="29dp"
+                    android:text="    Fuel Station Location"
+                    android:textColor="#0E0E0E"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etFuelStationLocation2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:ems="10"
+                    android:hint="Fuel Station Location"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:textColorHint="#A1887F"
+                    android:textSize="20sp" />
+
+                <TableRow
+                    android:layout_width="401dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="123dp"
+                        android:layout_height="wrap_content"
+                        android:text="Petrol 92(L)"
+                        android:textAlignment="center"
+                        android:textColor="#070707"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:text="Petrol 93(L)"
+                        android:textAlignment="center"
+                        android:textColor="#070707"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="129dp"
+                        android:layout_height="wrap_content"
+                        android:text="Diesel(L)"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/editTextPetrol92"
+                        android:layout_width="106dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/edittext_rounded_corners"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="phone"
+                        android:textColorHint="#A1887F"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editTextPetrol95"
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/edittext_rounded_corners"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="phone"
+                        android:textColorHint="#A1887F"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/editTextDiesel"
+                        android:layout_width="119dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/edittext_rounded_corners"
+                        android:ems="10"
+                        android:importantForAutofill="no"
+                        android:inputType="phone"
+                        android:textColorHint="#A1887F"
+                        android:textSize="24sp" />
+                </TableRow>
+
+                <Button
+                    android:id="@+id/btnRegisterFuel"
+                    android:layout_width="match_parent"
+                    android:layout_height="62dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/edittext_rounded_corners"
+                    android:backgroundTint="#009688"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:text="REGISTER"
+                    android:textAlignment="center"
+                    android:textColor="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:textSize="24sp"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

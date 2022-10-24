@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/drawable/ic_launcher_background.xml" value="0.11614583333333334" />
+        <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_add_fuel_loactor.xml" value="0.18" />
+        <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_admin_home.xml" value="0.18" />
+        <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_register.xml" value="0.14" />
         <entry key="..\:/Users/Isini/AndroidStudioProjects/MyFuelApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
