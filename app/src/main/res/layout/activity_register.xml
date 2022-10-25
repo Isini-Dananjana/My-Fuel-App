@@ -39,7 +39,7 @@
                 android:orientation="vertical" >
 
                 <EditText
-                    android:id="@+id/etFitstName"
+                    android:id="@+id/etFirstName"
                     android:layout_width="match_parent"
                     android:layout_height="71dp"
                     android:layout_marginStart="12dp"
