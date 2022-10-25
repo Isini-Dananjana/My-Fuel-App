@@ -29,6 +29,10 @@ public class User {
     @Expose
     private String password;
 
+    @SerializedName("type")
+    @Expose
+    private String type;
+
     public String getId() {
         return id;
     }
@@ -75,5 +79,13 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
