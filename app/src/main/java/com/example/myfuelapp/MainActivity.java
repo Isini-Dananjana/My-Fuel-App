@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fuel_station_filter_screen);
+        setContentView(R.layout.activity_add_fuel_loactor);
     }
 
     public void onClick(View view) {
