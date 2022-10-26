@@ -18,4 +18,8 @@
     <string name="register_locator">Register Fuel Location</string>
     <string name="select_area">Select Area</string>
     <string name="view_shed">View Shed</string>
+    <string name="queue_settings">Queue Settings</string>
+    <string name="your_position_label">Your Position</string>
+    <string name="leave_after_pumping">Leave After Pumping Fuel</string>
+    <string name="leave_without_pumping">Leave Without Pumping Fuel</string>
 </resources>

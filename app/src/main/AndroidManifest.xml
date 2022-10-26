@@ -13,7 +13,13 @@
         android:theme="@style/Theme.MyFuelApp"
         android:usesCleartextTraffic="true">
         <activity
-
+            android:name=".UsersQueueSettingsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".AddFuelLoactor"
             android:exported="true" />
         <activity
