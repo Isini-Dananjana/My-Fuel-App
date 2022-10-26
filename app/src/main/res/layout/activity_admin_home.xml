@@ -4,72 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/admin_home_wallpaper"
     tools:context=".AdminHome">
 
     <TextView
-        android:id="@+id/txt_dashboard"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="280dp"
-        android:text="DASHBORAD"
-        android:textColor="#040404"
-        android:textSize="34sp"
+        android:id="@+id/adminPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:gravity="center_horizontal"
+        android:text="Fuel Dashborad"
+        android:textAlignment="center"
+
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegisterPump"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/btnViewLocators"
-        android:layout_width="360dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="27dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+    <Button
+        android:id="@+id/btn_pump_stations"
+        android:layout_width="157dp"
+        android:layout_height="111dp"
+
+        android:layout_marginTop="60dp"
+        android:background="@drawable/input_design"
+        android:text="Pump Stations"
+        android:textAllCaps="false"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/img_2" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/btnRegisterPump"
-        android:layout_width="166dp"
-        android:layout_height="193dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="121dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSettings"
+    <Button
+        android:id="@+id/btn_update_fuel_stat"
+        android:layout_width="158dp"
+        android:layout_height="110dp"
+
+        android:layout_marginTop="4dp"
+        android:background="@drawable/layout_border"
+        android:text="Update Fuel Locator"
+        android:textAllCaps="false"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.162"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_dashboard"
-        app:srcCompat="@drawable/img_1" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_pump_stations" />
 
-    <ImageButton
-        android:id="@+id/btnSettings"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="26dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnRegisterPump"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnRegisterPump"
-        app:layout_constraintTop_toTopOf="@+id/btnRegisterPump"
-        app:srcCompat="@drawable/img_3" />
+    <Button
+        android:id="@+id/btn_view_fuel_stat"
+        android:layout_width="159dp"
+        android:layout_height="116dp"
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="79dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnViewLocators"
+        android:layout_marginTop="120dp"
+        android:background="@drawable/input_design"
+        android:text="View fuel Stations"
+        android:textAllCaps="false"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/fuel_board_green" />
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pump_stations" />
+
+    <Button
+        android:id="@+id/btn_settings"
+        android:layout_width="161dp"
+        android:layout_height="117dp"
+
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="240dp"
+        android:background="@drawable/input_design"
+        android:text="Settings"
+        android:textAllCaps="false"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pump_stations" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

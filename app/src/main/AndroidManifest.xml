@@ -20,6 +20,10 @@
                 android:value="" />
         </activity>
         <activity
+        <activity
+            android:name=".FuelDetailView"
+            android:exported="true" />
+        <activity
             android:name=".AddFuelLoactor"
             android:exported="true" />
         <activity
