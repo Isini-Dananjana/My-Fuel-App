@@ -86,7 +86,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/editTextPetrol92"
+                    android:id="@+id/editTextPhone"
                     android:layout_width="match_parent"
                     android:layout_height="71dp"
                     android:layout_marginStart="12dp"
