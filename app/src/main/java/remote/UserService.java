@@ -14,15 +14,20 @@ import retrofit2.http.Path;
 
 public interface UserService {
 
-    @GET("api/user")
+    String ENDPOINT_NAME = "user/";
+
+    @GET(ENDPOINT_NAME)
     Call<List<User>> getUsers();
 
-    @POST("add/")
+    @POST(ENDPOINT_NAME)
     Call<User> addUser(@Body User user);
 
-    @PUT("update/{id}")
+    @POST(ENDPOINT_NAME + "/login")
+    Call<User> login(@Body User user);
+
+    @PUT(ENDPOINT_NAME+"{id}")
     Call<User> updateUser(@Path("id") int id, @Body User user);
 
-    @DELETE("delete/{id}")
+    @DELETE(ENDPOINT_NAME+"{id}")
     Call<User> deleteUser(@Path("id") int id);
 }
