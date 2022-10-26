@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        btnSignUp = (Button) findViewById(R.id.btnRegister);
+        btnSignUp = (Button) findViewById(R.id.btnRegisterFuel);
         userService = APIUtils.getUserService();
         readInputValues();
 

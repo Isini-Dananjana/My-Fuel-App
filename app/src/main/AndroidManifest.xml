@@ -13,7 +13,14 @@
         android:theme="@style/Theme.MyFuelApp"
         android:usesCleartextTraffic="true">
         <activity
+
+            android:name=".AddFuelLoactor"
+            android:exported="true" />
+        <activity
+            android:name=".AdminHome"
+
             android:name=".FuelStationFilterScreen"
+
             android:exported="true" />
         <activity
             android:name=".RegisterActivity"

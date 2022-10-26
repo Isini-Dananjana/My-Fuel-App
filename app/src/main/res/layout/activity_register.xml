@@ -39,7 +39,9 @@
                 android:orientation="vertical" >
 
                 <EditText
+
                     android:id="@+id/etFirstName"
+
                     android:layout_width="match_parent"
                     android:layout_height="71dp"
                     android:layout_marginStart="12dp"
@@ -84,7 +86,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/editTextPhone"
+                    android:id="@+id/editTextPetrol92"
                     android:layout_width="match_parent"
                     android:layout_height="71dp"
                     android:layout_marginStart="12dp"
@@ -129,7 +131,7 @@
                     android:textSize="24sp" />
 
                 <Button
-                    android:id="@+id/btnRegister"
+                    android:id="@+id/btnRegisterFuel"
                     android:layout_width="match_parent"
                     android:layout_height="62dp"
                     android:layout_gravity="center_horizontal"
