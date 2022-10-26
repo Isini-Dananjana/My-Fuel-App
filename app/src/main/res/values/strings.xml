@@ -16,4 +16,6 @@
     <string name="signup_title">Sign Up</string>
     <string name="login_link">Have an account? Login</string>
     <string name="register_locator">Register Fuel Location</string>
+    <string name="select_area">Select Area</string>
+    <string name="view_shed">View Shed</string>
 </resources>
