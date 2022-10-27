@@ -10,4 +10,8 @@ public class APIUtils {
     public static UserService getUserService(){
         return RetrofitClient.getClient(API_URL).create(UserService.class);
     }
+
+    public static FuelStationService getFuelStationService(){
+        return RetrofitClient.getClient(API_URL).create(FuelStationService.class);
+    }
 }

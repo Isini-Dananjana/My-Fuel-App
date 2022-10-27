@@ -20,7 +20,6 @@
                 android:value="" />
         </activity>
         <activity
-        <activity
             android:name=".FuelDetailView"
             android:exported="true" />
         <activity

@@ -55,7 +55,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/averageTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
@@ -157,7 +157,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
             <Button
-                android:id="@+id/outlinedButton"
+                android:id="@+id/enterToThePetronQueButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -240,7 +240,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/ptOct92" />
 
             <Button
-                android:id="@+id/outlinedButtonptOct92"
+                android:id="@+id/outlinedButtonptDiesl"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -255,12 +255,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>
-
-
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

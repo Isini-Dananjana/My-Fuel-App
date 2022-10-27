@@ -95,27 +95,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    public void getUsersList(){
-        Call<List<User>> call = userService.getUsers();
-        call.enqueue(new Callback<List<User>>() {
-            @Override
-            public void onResponse(Call<List<User>> call, Response<List<User>> response) {
-                if(response.isSuccessful()){
-                    list = response.body();
-
-                    for(User s : list){
-                        System.out.println(s.getFirstName());
-                    }
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<User>> call, Throwable t) {
-                Log.e("ERROR: ", t.getMessage());
-            }
-        });
-    }
 
     public void onClick(View view) {
         switch(view.getId()){
