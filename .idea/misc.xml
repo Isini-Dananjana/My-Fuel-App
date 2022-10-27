@@ -9,8 +9,11 @@
         <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_add_fuel_details.xml" value="0.22" />
         <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_add_fuel_loactor.xml" value="0.18" />
         <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_admin_home.xml" value="0.22" />
-        <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_fuel_station_filter_screen.xml" value="0.153125" />
+        <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_fuel_station_filter_screen.xml" value="0.33" />
         <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_register.xml" value="0.14" />
+        <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/activity_users_queue_settings.xml" value="0.1109375" />
+        <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/drop_down_single_item.xml" value="0.1109375" />
+        <entry key="..\:/SLIIT-Y4/EAD/My-Fuel-App/app/src/main/res/layout/single_shed_item.xml" value="0.33" />
         <entry key="..\:/Users/Isini/AndroidStudioProjects/MyFuelApp/app/src/main/res/layout/activity_main.xml" value="0.25" />
       </map>
     </option>
@@ -24,7 +27,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.2" />
+        <option name="scale" value="0.33" />
       </ProjectState>
     </option>
   </component>
