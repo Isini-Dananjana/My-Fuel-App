@@ -38,12 +38,28 @@ public class FuelStationFilterScreen extends AppCompatActivity {
         fuelStationService = APIUtils.getFuelStationService();
         setContentView(R.layout.activity_fuel_station_filter_screen);
 
+        listView = (ListView) findViewById(R.id.shedListView);
         autoCompleteTextView = findViewById(R.id.AutoCompleteTextview);
         String[] Subjects = new String[]{"Kadawatha", "Gampaha", "Colombo" , "Kandy" , "Trinco"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.drop_down_single_item, Subjects);
         autoCompleteTextView.setAdapter(adapter);
         autoCompleteTextView.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "" + autoCompleteTextView.getText().toString(), Toast.LENGTH_SHORT).show());
+
+        fuelStationList = new ArrayList<>();
+
+        FuelStationModel fuelStationModel = new FuelStationModel();
+        fuelStationModel.setName("Kadawatha IOC 1");
+        FuelStationModel fuelStationModel1 = new FuelStationModel();
+        fuelStationModel1.setName("Ragama 1");
+
+        fuelStationList.add(fuelStationModel);
+        fuelStationList.add(fuelStationModel1);
+
+        FuelStationAdapterView fuelStationAdapterView = new FuelStationAdapterView(FuelStationFilterScreen.this , fuelStationList);
+        listView.setAdapter(fuelStationAdapterView);
+
+
         //getFuelStations();
 
     }
