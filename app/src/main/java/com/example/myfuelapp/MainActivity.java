@@ -30,36 +30,6 @@ public class MainActivity extends AppCompatActivity {
         readInputValues();
         userService = APIUtils.getUserService();
 
-        /*
-        * Get user entered password and email
-        * */
-        User user = new User();
-        user.setEmail(email.getText().toString());
-        user.setPassword(email.getText().toString());
-
-        /*
-        * Send api request to check login
-        * */
-
-        User loggedUser = userLogin(user);
-
-
-        if(loggedUser.getId() != null){
-
-            Toast.makeText(this,"User Logged in successfully ",Toast.LENGTH_LONG).show();
-
-            switch (loggedUser.getType()){
-                case "customer":
-                    //Navigate to customer  UI
-                    Intent intent = new Intent(this,FuelStationFilterScreen.class);
-                    startActivity(intent);
-                default:
-                    //Navigate to admin UI
-                    Intent intent1 = new Intent(this,AdminHome.class);
-                    startActivity(intent1);
-            }
-        }
-
 
 
     }
@@ -70,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, RegisterActivity.class));
                 break;
             case R.id.btnLogin:
-                startActivity(new Intent(this, FuelStationFilterScreen.class));
+                handleLogin();
                 break;
         }
     }
@@ -82,21 +52,60 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    public void handleLogin(){
+        /*
+         * Get user entered password and email
+         * */
+        User user = new User();
+        user.setEmail(email.getText().toString());
+        user.setPassword(password.getText().toString());
+
+        /*
+         * Send api request to check login
+         * */
+
+        User loggedUser = userLogin(user);
+
+
+
+    }
     public User userLogin(User u){
-        Call<User> call = userService.addUser(u);
+        u.setId("");
+        u.setFirstName("");
+        u.setLastName("");
+        u.setMobile("");
+        u.setType("");
+
+        Call<User> call = userService.login(u);
         User userResponse = new User();
         call.enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                if(response.isSuccessful()){
+                if(response.code() == 200){
 
-                   userResponse.setId(response.body().getId());
-                   userResponse.setEmail(response.body().getEmail());
-                   userResponse.setType(response.body().getType());
-                   userResponse.setMobile(response.body().getMobile());
-                   userResponse.setFirstName(response.body().getFirstName());
-                   userResponse.setLastName(response.body().getLastName());
+                    if(response.body().getId() != null){
 
+                        Toast.makeText(MainActivity.this,"User Logged in successfully ",Toast.LENGTH_LONG).show();
+
+                        switch (response.body().getType()){
+                            case "customer":
+                                //Navigate to customer  UI
+                                Intent intent = new Intent(MainActivity.this,FuelStationFilterScreen.class);
+                                startActivity(intent);
+                                break;
+                            default:
+                                //Navigate to admin UI
+                                Intent intent1 = new Intent(MainActivity.this,AdminHome.class);
+                                startActivity(intent1);
+                        }
+                    }else{
+                        Toast.makeText(MainActivity.this,"User Login failed ",Toast.LENGTH_LONG).show();
+                    }
+
+                }else{
+
+                    Toast.makeText(MainActivity.this,"User Login failed invalid password or email",Toast.LENGTH_LONG).show();
                 }
             }
 

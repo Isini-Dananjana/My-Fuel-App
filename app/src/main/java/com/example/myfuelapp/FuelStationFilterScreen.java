@@ -44,7 +44,7 @@ public class FuelStationFilterScreen extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.drop_down_single_item, Subjects);
         autoCompleteTextView.setAdapter(adapter);
         autoCompleteTextView.setOnClickListener(view -> Toast.makeText(getApplicationContext(), "" + autoCompleteTextView.getText().toString(), Toast.LENGTH_SHORT).show());
-        getFuelStations();
+        //getFuelStations();
 
     }
 
