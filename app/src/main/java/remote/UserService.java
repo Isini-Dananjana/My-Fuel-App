@@ -22,7 +22,7 @@ public interface UserService {
     @POST(ENDPOINT_NAME)
     Call<User> addUser(@Body User user);
 
-    @POST(ENDPOINT_NAME + "/login")
+    @POST("user/login/")
     Call<User> login(@Body User user);
 
     @PUT(ENDPOINT_NAME+"{id}")
