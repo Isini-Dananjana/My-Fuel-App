@@ -8,6 +8,19 @@ import java.util.List;
 
 public class FuelStationModel implements Serializable {
 
+    public FuelStationModel(String id, String area, String name, int currentQueSize, double averageTimeSpent, int updateVersionCount, List<FuelTypeModel> fuelTypes) {
+        this.id = id;
+        this.area = area;
+        this.name = name;
+        this.currentQueSize = currentQueSize;
+        this.averageTimeSpent = averageTimeSpent;
+        this.updateVersionCount = updateVersionCount;
+        this.fuelTypes = fuelTypes;
+    }
+
+    public FuelStationModel() {
+    }
+
     @SerializedName("id")
     @Expose
     private String id;
@@ -87,4 +100,7 @@ public class FuelStationModel implements Serializable {
     public void setFuelTypes(List<FuelTypeModel> fuelTypes) {
         this.fuelTypes = fuelTypes;
     }
+
+
+
 }
