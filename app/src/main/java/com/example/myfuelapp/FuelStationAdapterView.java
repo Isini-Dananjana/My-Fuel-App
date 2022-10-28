@@ -38,7 +38,13 @@ public class FuelStationAdapterView   extends ArrayAdapter<FuelStationModel> {
         LayoutInflater inflater = context.getLayoutInflater();
         View listViewItem = inflater.inflate(R.layout.single_shed_item, null, true);
         TextView shedName = (TextView) listViewItem.findViewById(R.id.singleItemShedName);
+        TextView petrolQueSize = (TextView) listViewItem.findViewById(R.id.singlPetrolQSize);
+        TextView dieslQueSize = (TextView) listViewItem.findViewById(R.id.dieslQSize);
         shedName.setText(currFuelStation.getName());
+
+        petrolQueSize.setText("Petrol Que size : " + currFuelStation.getFuelTypes().get(0).getQueSize());
+        dieslQueSize.setText("Diesel Que size : " + currFuelStation.getFuelTypes().get(2).getQueSize());
+
         return listViewItem;
     }
 }
