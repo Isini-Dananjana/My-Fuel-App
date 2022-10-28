@@ -3,7 +3,9 @@ package model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class FuelTypeModel {
+import java.io.Serializable;
+
+public class FuelTypeModel implements Serializable {
 
     @SerializedName("fuelType")
     @Expose

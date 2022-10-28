@@ -8,74 +8,58 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import model.FuelStationModel;
 
 public class FuelDetailView extends AppCompatActivity {
 
 
-    TextView averageTime;
-    TextView name;
+
     FuelStationModel fuelStationModel;
-    TextView petrol95Liters;
-    TextView petrol92Liters;
-    TextView  diesl;
-    Button enterToThePetrol;
-    Button enterToDiesl;
+    TextView averageSpentTime;
+    TextView areaName;
+    TextView fuelStationName;
+    TextView pCot95Lit;
+    TextView pOct92Lit;
+    TextView dieslLit;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fuel_detail_view);
         Intent intent =  getIntent();
-        fuelStationModel = (FuelStationModel) intent.getSerializableExtra("CURR_FUEL_STATION");
+        fuelStationModel = (FuelStationModel) intent.getSerializableExtra("CURRENT_FUEL_STATION");
+        averageSpentTime = findViewById(R.id.averageSpentTime);
+        areaName =  findViewById(R.id.areaName);
+        fuelStationName = findViewById(R.id.detailViewFuelStationName);
 
-        /*
-        * Read display values
-        * */
-
-        averageTime = findViewById(R.id.textView11);
-        name = findViewById(R.id.textView12);
-        petrol92Liters = findViewById(R.id.textView14);
-        petrol95Liters = findViewById(R.id.textView3);
-        diesl = findViewById(R.id.textView2);
-        enterToThePetrol = findViewById(R.id.enterToThePetronQueButton);
-        enterToDiesl = findViewById(R.id.outlinedButtonptDiesl);
+        pCot95Lit = findViewById(R.id.pCot95Litr);
+        pOct92Lit = findViewById(R.id.ptOct92Liter);
+        dieslLit =  findViewById(R.id.dieslLitr);
 
 
-        /*
-        * Set display values
-        * */
 
-        averageTime.setText((int) fuelStationModel.getAverageTimeSpent());
-        name.setText(fuelStationModel.getName());
-        petrol92Liters.setText((int) fuelStationModel.getFuelTypes().get(0).getNoOfLitters());
-        petrol95Liters.setText((int) fuelStationModel.getFuelTypes().get(1).getNoOfLitters());
-        diesl.setText((int) fuelStationModel.getFuelTypes().get(2).getNoOfLitters());
+        /**
+         *  Get average spent time
+         * */
 
-        /*
-        * Enter to petrol que
-        * */
+        int hours = (int) (fuelStationModel.getAverageTimeSpent() / 60);
+        double remaningMins = (double) (fuelStationModel.getAverageTimeSpent() % 60 );
+        averageSpentTime.setText("" + hours + " hours, " + remaningMins + " minutes .");
 
-        enterToThePetrol.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent1 = new Intent(FuelDetailView.this,UsersQueueSettingsActivity.class);
-                startActivity(intent1);
-            }
-        });
+        /**
+         *  Set area name
+        **/
 
-        /*
-        * Enter to diesel
-        *
-        * **/
+        areaName.setText(fuelStationModel.getArea() + " Sri Lanka");
 
-        enterToDiesl.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent2 = new Intent(FuelDetailView.this , UsersQueueSettingsActivity.class);
-                startActivity(intent2);
-            }
-        });
+        //  Fuel station name
+        fuelStationName.setText(fuelStationModel.getName());
+        //Set fuel values
+
+
 
     }
 

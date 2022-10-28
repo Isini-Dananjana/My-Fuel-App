@@ -4,13 +4,14 @@ import model.User;
 
 public class UserCredentialUtil {
 
-     private  User user;
+     private  static User user;
 
-     public void setCurrentUser(User user){
-         this.user = user;
+     public static void setCurrentUser(User userObj){
+
+         user = userObj;
      }
 
-     public User getUser(){
+     public static User getUser(){
 
          return user;
      }

@@ -60,6 +60,19 @@ public class FuelStationFilterScreen extends AppCompatActivity {
         getFuelStations();
 
 
+        listView.setOnItemClickListener(new  android.widget.AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    final int position, long id) {
+
+                FuelStationModel fuelStationModel = (FuelStationModel) parent.getItemAtPosition(position);
+                Intent intent =  new Intent(FuelStationFilterScreen.this,FuelDetailView.class);
+                intent.putExtra("CURRENT_FUEL_STATION",fuelStationModel);
+                startActivity(intent);
+
+
+            }
+        });
     }
 
 
@@ -117,9 +130,7 @@ public class FuelStationFilterScreen extends AppCompatActivity {
         listView.setAdapter(fuelStationAdapterView);
     }
 
-    public void OnclickFuelStation(int id){
-        FuelStationModel fuelStationModel = fuelStationList.get(id);
-        Intent intent =  new Intent(FuelStationFilterScreen.this , FuelDetailView.class);
-        intent.putExtra("CURR_FUEl_STATION",fuelStationModel);
-    }
+
+
+
 }

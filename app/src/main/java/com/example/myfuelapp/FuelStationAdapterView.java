@@ -2,6 +2,7 @@ package com.example.myfuelapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,6 +45,17 @@ public class FuelStationAdapterView   extends ArrayAdapter<FuelStationModel> {
 
         petrolQueSize.setText("Petrol Que size : " + currFuelStation.getFuelTypes().get(0).getQueSize());
         dieslQueSize.setText("Diesel Que size : " + currFuelStation.getFuelTypes().get(2).getQueSize());
+
+//        listViewItem.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent =  new Intent(context,FuelDetailView.class);
+//                intent.putExtra("CURRENT_FUEL_STATION",currFuelStation);
+//                context.startActivity(intent);
+//            }
+//        });
+
+
 
         return listViewItem;
     }
