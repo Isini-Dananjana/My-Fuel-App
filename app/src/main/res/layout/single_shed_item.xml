@@ -14,7 +14,7 @@
         android:layout_width="210dp"
         android:layout_height="26dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Kadawatha IOC Petrol shed"
         android:textColor="#000000"
         android:textSize="16sp"
@@ -39,23 +39,25 @@
         android:id="@+id/singlPetrolQSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
         android:text="Petrol Que Size : 80"
         android:textColor="#D84315"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView3" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/singleItemShedName" />
 
     <TextView
         android:id="@+id/dieslQSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="8dp"
         android:text="Diesel Que size : 80"
+
         android:textColor="#D84315"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/singlPetrolQSize"
-        app:layout_constraintStart_toEndOf="@+id/singlPetrolQSize" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/singlPetrolQSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

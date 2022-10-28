@@ -11,9 +11,21 @@ public class FuelTypeModel {
     @SerializedName("available")
     @Expose
     private Boolean available ;
+
+    public int getQueSize() {
+        return queSize;
+    }
+
+    public void setQueSize(int queSize) {
+        this.queSize = queSize;
+    }
+
     @SerializedName("noOfLitters")
     @Expose
     private double noOfLitters ;
+
+    @SerializedName("queSize")
+    private int queSize;
 
     public String getFuelType() {
         return fuelType;
