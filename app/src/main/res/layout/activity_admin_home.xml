@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/admin_home_wallpaper"
+    android:onClick="onClick"
     tools:context=".AdminHome">
 
     <TextView
@@ -46,6 +47,7 @@
 
         android:layout_marginTop="4dp"
         android:background="@drawable/layout_border"
+        android:onClick="onClick"
         android:text="Update Fuel Locator"
         android:textAllCaps="false"
         android:textColor="@android:color/secondary_text_light"

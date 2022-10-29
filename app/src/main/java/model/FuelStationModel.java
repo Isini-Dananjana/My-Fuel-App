@@ -8,13 +8,14 @@ import java.util.List;
 
 public class FuelStationModel implements Serializable {
 
-    public FuelStationModel(String id, String area, String name, int currentQueSize, double averageTimeSpent, int updateVersionCount, List<FuelTypeModel> fuelTypes) {
+    public FuelStationModel(String id, String area, String name, int currentQueSize, double averageTimeSpent, int updateVersionCount, String ownerId, List<FuelTypeModel> fuelTypes) {
         this.id = id;
         this.area = area;
         this.name = name;
         this.currentQueSize = currentQueSize;
         this.averageTimeSpent = averageTimeSpent;
         this.updateVersionCount = updateVersionCount;
+        this.ownerId = ownerId;
         this.fuelTypes = fuelTypes;
     }
 
@@ -24,13 +25,15 @@ public class FuelStationModel implements Serializable {
     @SerializedName("id")
     @Expose
     private String id;
-
     @SerializedName("area")
     @Expose
     private String area;
     @SerializedName("name")
     @Expose
     private String name;
+    @SerializedName("ownerId")
+    @Expose
+    private String ownerId;
     @SerializedName("currentQueSize")
     @Expose
     private int currentQueSize;
@@ -92,7 +95,9 @@ public class FuelStationModel implements Serializable {
     public void setUpdateVersionCount(int updateVersionCount) {
         this.updateVersionCount = updateVersionCount;
     }
-
+    public String getOwnerId() {
+        return ownerId;
+    }
     public List<FuelTypeModel> getFuelTypes() {
         return fuelTypes;
     }
