@@ -31,9 +31,6 @@ public class FuelStationModel implements Serializable {
     @SerializedName("name")
     @Expose
     private String name;
-    @SerializedName("ownerId")
-    @Expose
-    private String ownerId;
     @SerializedName("currentQueSize")
     @Expose
     private int currentQueSize;
@@ -98,9 +95,6 @@ public class FuelStationModel implements Serializable {
 
     public void setUpdateVersionCount(int updateVersionCount) {
         this.updateVersionCount = updateVersionCount;
-    }
-    public String getOwnerId() {
-        return ownerId;
     }
     public List<FuelTypeModel> getFuelTypes() {
         return fuelTypes;

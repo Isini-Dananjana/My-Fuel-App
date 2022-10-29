@@ -24,7 +24,9 @@ public class AdminHome extends AppCompatActivity {
     FuelStationService fuelStationService;
     List<FuelStationModel> fuelStationList;
     FuelStationModel filteredFuelStation;
-    String userId = "635c3c5108345fe78e7e6e4d";
+    String userId;
+
+//    String userId = "635c3c5108345fe78e7e6e4d";
 
     Button viewFuelStations,updateFuelLocator;
 
@@ -32,7 +34,8 @@ public class AdminHome extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_home);
-
+        Intent intent = getIntent();
+        userId = intent.getStringExtra("USER_ID");
         viewFuelStations = (Button) findViewById(R.id.btn_pump_stations);
         updateFuelLocator = (Button) findViewById(R.id.btn_update_fuel_stat);
 

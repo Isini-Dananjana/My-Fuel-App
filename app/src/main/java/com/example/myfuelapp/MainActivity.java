@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 if(response.code() == 200){
 
                     if(response.body().getId() != null){
-
+                        String userId = response.body().getId();
                         Toast.makeText(MainActivity.this,"User Logged in successfully ",Toast.LENGTH_LONG).show();
 
                         switch (response.body().getType()){
@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
                             default:
                                 //Navigate to admin UI
                                 Intent intent1 = new Intent(MainActivity.this,AdminHome.class);
+                                intent1.putExtra("USER_ID", userId);
                                 startActivity(intent1);
                         }
                     }else{

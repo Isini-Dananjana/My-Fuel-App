@@ -66,31 +66,6 @@
                     android:textColorHint="#A1887F"
                     android:textSize="20sp" />
 
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="match_parent"
-                    android:layout_height="29dp"
-                    android:text="    Fuel Station Number"
-                    android:textColor="#0E0E0E"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/etFuelStationLocation"
-                    android:layout_width="400dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="15dp"
-                    android:background="@drawable/edittext_rounded_corners"
-                    android:ems="10"
-                    android:hint="Fuel Station Number"
-                    android:importantForAutofill="no"
-                    android:inputType="textPersonName"
-                    android:textColorHint="#A1887F"
-                    android:textSize="20sp" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -205,7 +180,7 @@
                 </TableRow>
 
                 <Button
-                    android:id="@+id/btnRegisterFuel"
+                    android:id="@+id/btnUpdateFuelStationAdmin"
                     android:layout_width="308dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -214,6 +189,7 @@
                     android:layout_marginEnd="12dp"
                     android:background="@drawable/edittext_rounded_corners"
                     android:backgroundTint="#009688"
+                    android:onClick="onClick"
                     android:paddingLeft="50dp"
                     android:paddingRight="50dp"
                     android:text="UPDATE"
