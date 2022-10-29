@@ -69,6 +69,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
+                android:onClick="onClickLeave"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
                 android:text="@string/leave_after_pumping" />
@@ -93,6 +94,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
+                android:onClick="onClickLeave"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
                 android:text="@string/leave_after_pumping" />

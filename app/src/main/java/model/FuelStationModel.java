@@ -45,6 +45,10 @@ public class FuelStationModel implements Serializable {
     @Expose
     private List<FuelTypeModel> fuelTypes;
 
+    @SerializedName("ownerId")
+    @Expose
+    private String ownerId;
+
     public String getId() {
         return id;
     }
@@ -101,6 +105,11 @@ public class FuelStationModel implements Serializable {
         this.fuelTypes = fuelTypes;
     }
 
+    public String getOwnerId() {
+        return ownerId;
+    }
 
-
+    public void setOwnerId(String ownerId) {
+        this.ownerId = ownerId;
+    }
 }
