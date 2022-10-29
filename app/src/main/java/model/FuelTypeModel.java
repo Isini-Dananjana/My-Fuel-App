@@ -1,5 +1,7 @@
 package model;
 
+import android.text.Editable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
