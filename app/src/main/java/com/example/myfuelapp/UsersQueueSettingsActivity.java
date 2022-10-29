@@ -44,10 +44,11 @@ public class UsersQueueSettingsActivity extends AppCompatActivity {
 
         int prevSize = fuelStationModel.getFuelTypes().get(fuelType).getQueSize();
         fuelStationModel.getFuelTypes().get(fuelType).setQueSize(prevSize + 1);
-        queSize.setText(Integer.toString(prevSize + 1)  );
+
+        queSize.setText( Integer.toString(fuelStationModel.getFuelTypes().get(fuelType).getQueSize()));
 
         //update data base
-        updateFuelStation(fuelStationModel);
+        //updateFuelStation(fuelStationModel);
 
     }
 
