@@ -1,5 +1,6 @@
 package com.example.myfuelapp;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,6 +24,9 @@ public class FuelDetailView extends AppCompatActivity {
     TextView pCot95Lit;
     TextView pOct92Lit;
     TextView dieslLit;
+    int selectedFuelType;
+
+    //AlertDialog.Builder loca
 
 
     @Override
@@ -58,8 +62,29 @@ public class FuelDetailView extends AppCompatActivity {
         //  Fuel station name
         fuelStationName.setText(fuelStationModel.getName());
         //Set fuel values
+        pCot95Lit.setText(fuelStationModel.getFuelTypes().get(0).getNoOfLitters() + " L ");
+        pOct92Lit.setText(fuelStationModel.getFuelTypes().get(1).getNoOfLitters() + " L ");
+        dieslLit.setText(fuelStationModel.getFuelTypes().get(2).getNoOfLitters() + " L ");
 
 
+    }
+
+    public void onClickEnterToTheQue(View view){
+        switch (view.getId()){
+            case R.id.p95Btn:
+                selectedFuelType = 0;
+                break;
+            case  R.id.p92Btn:
+                selectedFuelType = 1;
+                break;
+            case R.id.dieslBtn:
+                selectedFuelType = 2;
+                break;
+        }
+        Intent intent = new Intent(FuelDetailView.this , UsersQueueSettingsActivity.class);
+        intent.putExtra("FUEL_TYPE" , selectedFuelType);
+        intent.putExtra("CURRENT_FUEL_STATION" , fuelStationModel);
+        startActivity(intent);
 
     }
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,6 +33,7 @@ public class RegisterActivity extends AppCompatActivity {
     EditText mobile;
     EditText password;
     EditText confirmPassword;
+    boolean valid = true;
 
 
     @Override
@@ -47,21 +49,69 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                validateData();
+                if(valid){
+                    User user = new User();
+                    user.setFirstName(firstName.getText().toString());
+                    user.setLastName(lastName.getText().toString());
+                    user.setEmail(email.getText().toString());
+                    user.setMobile(mobile.getText().toString());
+                    user.setPassword(password.getText().toString());
+                    user.setType("customer");
+                    addUser(user);
+                }
 
-                User user = new User();
-                user.setFirstName(firstName.getText().toString());
-                user.setLastName(lastName.getText().toString());
-                user.setEmail(email.getText().toString());
-                user.setMobile(mobile.getText().toString());
-                user.setPassword(password.getText().toString());
-                user.setType("customer");
-
-
-                addUser(user);
             }
         });
     }
 
+    public void validateData(){
+        valid = true;
+        if(firstName.getText().toString().isEmpty()){
+            //Toast.makeText(RegisterActivity.this, "Please enter the first name", Toast.LENGTH_LONG).show();
+            firstName.setError("This field is required ");
+            valid = false;
+        }
+        if(lastName.getText().toString().isEmpty()){
+            //Toast.makeText(RegisterActivity.this, "Please enter the first name", Toast.LENGTH_LONG).show();
+            lastName.setError("This field is required ");
+            valid = false;
+        }
+        if(email.getText().toString().isEmpty()){
+            //Toast.makeText(RegisterActivity.this, "Please enter the first name", Toast.LENGTH_LONG).show();
+            email.setError("This field is required ");
+            valid = false;
+        }
+
+        if(mobile.getText().toString().isEmpty()){
+            //Toast.makeText(RegisterActivity.this, "Please enter the first name", Toast.LENGTH_LONG).show();
+            mobile.setError("This field is required ");
+            valid = false;
+        }
+
+        if(password.getText().toString().isEmpty()){
+            //Toast.makeText(RegisterActivity.this, "Please enter the first name", Toast.LENGTH_LONG).show();
+            password.setError("This field is required ");
+            valid = false;
+        }
+
+        if(confirmPassword.getText().toString().isEmpty()){
+            //Toast.makeText(RegisterActivity.this, "Please enter the first name", Toast.LENGTH_LONG).show();
+            confirmPassword.setError("This field is required ");
+            valid = false;
+        }
+
+        if(!Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()){
+            email.setError("Please enter a valid email address ");
+            valid = false;
+        }
+
+        if(!password.getText().toString().equals(confirmPassword.getText().toString())){
+            confirmPassword.setError("Password mismatch !");
+            valid = false;
+        }
+
+    }
     public void addUser(User u){
         Call<User> call = userService.addUser(u);
         call.enqueue(new Callback<User>() {

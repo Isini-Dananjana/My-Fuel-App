@@ -24,6 +24,7 @@
         android:layout_width="0dp"
         android:layout_height="484dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialCardView">
 
@@ -89,18 +90,19 @@
                         android:gravity="center_horizontal"
                         android:text="300 L"
                         android:textColor="#00695C"
-                        android:textSize="48sp"
+                        android:textSize="30sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.508"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/ptOct92" />
 
                     <Button
-                        android:id="@+id/outlinedButtonptDiesl"
+                        android:id="@+id/p92Btn"
                         style="?attr/materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
+                        android:onClick="onClickEnterToTheQue"
                         android:text="Enter to the Que"
                         android:textColor="#D84315"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -168,18 +170,19 @@
                         android:gravity="center_horizontal"
                         android:text="440 L"
                         android:textColor="#00695C"
-                        android:textSize="48sp"
+                        android:textSize="30sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.508"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
                     <Button
-                        android:id="@+id/enterToThePetronQueButton"
+                        android:id="@+id/p95Btn"
                         style="?attr/materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
+                        android:onClick="onClickEnterToTheQue"
                         android:text="Enter to the Que"
                         android:textColor="#D84315"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -247,18 +250,19 @@
                         android:gravity="center_horizontal"
                         android:text="440 L"
                         android:textColor="#00695C"
-                        android:textSize="48sp"
+                        android:textSize="30sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.508"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/textView12Diesl" />
 
                     <Button
-                        android:id="@+id/enterToThePetronQueButtonDiesl"
+                        android:id="@+id/dieslBtn"
                         style="?attr/materialButtonOutlinedStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
+                        android:onClick="onClickEnterToTheQue"
                         android:text="Enter to the Que"
                         android:textColor="#D84315"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -277,7 +281,7 @@
         android:layout_width="349dp"
         android:layout_height="113dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="22dp"

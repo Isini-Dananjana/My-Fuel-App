@@ -26,7 +26,7 @@ public interface FuelStationService {
 
 
     @PUT(ENDPOINT_NAME+"{id}")
-    Call<FuelStationModel> updateFuelStation(@Path("id") int id, @Body FuelStationModel fuelStation);
+    Call<FuelStationModel> updateFuelStation(@Path("id") String id, @Body FuelStationModel fuelStation);
 
     @DELETE(ENDPOINT_NAME+"{id}")
     Call<FuelStationModel> deleteFuelStation(@Path("id") int id);

@@ -19,14 +19,14 @@
             app:srcCompat="@drawable/fuelapplogo" />
 
         <TextView
-            android:id="@+id/queueSettingsLabel"
+            android:id="@+id/queSettingFuelStationName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/queue_settings"
             android:textAlignment="center"
             android:textColor="#009688"
-            android:textSize="36sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -37,11 +37,11 @@
             android:gravity="center"
             android:text="@string/your_position_label"
             android:textColor="#0E0E0E"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/queSizeLable"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -64,24 +64,14 @@
                 app:srcCompat="@drawable/leaveque2" />
 
             <Button
-                android:id="@+id/btnLeaveAfterPump"
+                android:id="@+id/leveAfterPump"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:backgroundTint="#009688"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp"
-                android:text="@string/leave_after_pumping"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textSize="16sp"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/leave_after_pumping" />
 
         </LinearLayout>
 
@@ -98,24 +88,14 @@
                 app:srcCompat="@drawable/leaveque1" />
 
             <Button
-                android:id="@+id/btnLeaveAfterPump3"
+                android:id="@+id/leaveWithoutPump"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="12dp"
-                android:layout_marginBottom="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_rounded_corners"
-                android:backgroundTint="#009688"
-                android:paddingLeft="50dp"
-                android:paddingRight="50dp"
-                android:text="@string/leave_without_pumping"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textColorLink="#FFFFFF"
-                android:textSize="16sp"
-                tools:ignore="DuplicateSpeakableTextCheck" />
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/leave_after_pumping" />
 
         </LinearLayout>
 
